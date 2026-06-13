@@ -44,16 +44,17 @@ public class complexjson {
 	}
 	""";
 		
-	 Response responce =
+Response response =
 			 given()
 			 .contentType(ContentType.JSON)
 			 .body(request)
 			 .when()
-			 .post("https://reqres.in//api/users")
+			 .post("https://reqres.in/api/users")
 			 .then()
-			 .responce;
+			 .extract()
+			 .response();
 			 
-//
+
 		 
 			       
 
